@@ -20,7 +20,8 @@ git restore <file> - комманда возвращает изменения в
 git rm --cached <file> - комманда удаляет файл из коммита
 git revert - отличается от ресет тем что создает новый коммит
 git reset <HASH_commit> - удаляем последний коммит из истории
-git push --delete origin homework
+git reset --hard <HASH_commit> - сбрасываем репозиторий до нужного коммита
+git push --delete origin <name_branch> - удоляет ветку 
 
 
 git reflog - команда показывает все операции которые были совершены в репозитории
