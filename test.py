@@ -101,17 +101,4 @@
 # print(mass)
 # # 2 5 3 4 6 1
 
-int(input())
-iter = list(map(int, input().split()))
-
-def bubble_sort(iter):
-	count = 0
-	for i in range(len(iter) - 1):
-		for j in range(len(iter) - i - 1):
-			if iter[j] > iter[j + 1]:
-				iter[j], iter[j + 1] = iter[j + 1], iter[j]
-				count += 1
-	return (count)
-
-
-print(bubble_sort(iter))
+import random
