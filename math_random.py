@@ -28,6 +28,3 @@ sample(players, 3)  # возвращает 3 случайные значения
 shuffle(players) # случайно перемешивает последовательность, возвращает None
 print(players)
 
-import sotr
-
-sotr
