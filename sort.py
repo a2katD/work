@@ -1,4 +1,4 @@
-# Сортировка перебором
+# Сортировка перебором - возвращает отсортированную последовательность
 def brute_force_sort(iter):
 	for i in range(len(iter)):
 		for j in range(len(iter)):
@@ -7,7 +7,7 @@ def brute_force_sort(iter):
 	return (iter)
 
 
-# Сортировка выбором
+# Сортировка выбором - возвращает отсортированную последовательность
 # def selection_sort(iter):
 # 	step = len(iter)
 # 	while step >= 0:
@@ -21,7 +21,7 @@ def brute_force_sort(iter):
 # 	return iter
 
 
-# Сортировка пузырьком
+# Сортировка пузырьком - возвращает отсортированную последовательность
 def bubble_sort(iter):
 	for i in range(len(iter) - 1):
 		for j in range(len(iter) - i - 1):
@@ -30,7 +30,7 @@ def bubble_sort(iter):
 	return (iter)
 
 
-# Линейный поиск
+# Линейный поиск - возвращает индекс искомого числа, -1 если нет
 def linear_search(iter, key):
 	for i in range(len(iter)):
 		if iter[i] == key:
@@ -38,7 +38,7 @@ def linear_search(iter, key):
 	return -1
 
 
-# Бинарный поиск
+# Бинарный поиск - возвращает индекс искомого числа, -1 если нет
 def binary_search(iter, key):
 	mid = len(iter) // 2
 	left = 0

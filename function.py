@@ -27,4 +27,3 @@ listed = [i for i in "hello"]  # превращает строку в списо
 listed = [[i, j] for i in [1, 2] for j in [4, 5]]  # пример создания 2 мерного массива
 listed = [i + j for i in [1, 2] for j in [4, 5] if i + j >= 6] # можно добавлять условие
 print(listed)
-
