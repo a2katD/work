@@ -101,4 +101,23 @@
 # print(mass)
 # # 2 5 3 4 6 1
 
-import random
+import os
+
+
+def create_dir(num):
+	for i in range(1, num + 1):
+		new_dir = os.path.join(os.getcwd(), ("dir_" + str(i)))
+		os.mkdir(new_dir)
+
+
+def delete_dir(num):
+	for i in range(1, num + 1):
+		new_dir = os.path.join(os.getcwd(), ("dir_" + str(i)))
+		os.rmdir(new_dir)
+
+# os.name  # имя операционной системы
+# os.chdir  # смена текущей директории
+# os.getcwd()  # возвращает текущую директорию
+# os.mkdir()  # создание дипректории
+# os.path  # вложенный модуль для работы с путями
+# os.listdir(path=".") # возвращает содержимое директории
