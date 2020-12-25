@@ -123,15 +123,43 @@ b = {5, 6, 7, 8, 9}
 # a | b  # возвращает объеденённые множества
 # a - b  # возвращает множество а, но без элементов б
 # ^ b  # возвращает все НЕ совпадающие значения
+#
+# Тернарный оператор, синтаксис:
+# результат1 если условие(истина) иначе результат 2
+# usl = False
+# name = 'Max' if usl else 'Empty'
+# print(name)
+#
+#
+# def torf(ch):
+# 	list_ch = list(ch)
+# 	for i in range(len(list_ch)):
+# 		list_ch[i] = list_ch[i].lower() if i % 2 != 0 else list_ch[i].upper()
+# 	return "".join(list_ch)
+#
+#
+# stroka = "слово"
+# print(torf(stroka))
+#
+#
+# def pass_check(password):
+# 	return True if password == "Jack" else False
+#
+#
+# print('Wellcome!' if (True if input() == '123' else False) else 'Wrong password')
+#
+# strokabyt = "Hello МИР".encode('utf-8')  # кодировка строки в байт строку
+# # print(strokabyt)
+# stroka = strokabyt.decode('utf-8')  # декодировка байт строки в строку
+# # print(stroka)
 
 import math  # импортирует целиком библеотеку
 import random as rd  # вызов модуля с псевдонимом rd
 from math import *  # импортирует всё содержимое модуля, чтобы вызывать его без имени
 from random import randint  # импортирует только определенные модули внуторь кода
 
-if __name__ == '__main__': # таким способом можно ограничить импорт скриптов
-	print(math.pi)
-	print(pi)  # тоже работает т.к. импортирован модуль внуторь моей программы
-	print(rd.randint(1, 10))
-	print(randint(1, 100))  # тоже работает т.к. импортировать отдельно
-
+if __name__ == '__main__':  # таким способом можно ограничить импорт скриптов
+	chislo_pi = math.pi
+	chislo_pi = pi  # тоже работает т.к. импортирован модуль внуторь моей программы
+	rd.randint(1, 10)
+	randint(1, 100)  # тоже работает т.к. импортировать отдельно

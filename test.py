@@ -115,12 +115,18 @@ def delete_dir(num):
 		new_dir = os.path.join(os.getcwd(), ("dir_" + str(i)))
 		os.rmdir(new_dir)
 
+
 # os.name  # имя операционной системы
 # os.chdir  # смена текущей директории
 # os.getcwd()  # возвращает текущую директорию
 # os.mkdir()  # создание дипректории
 # os.path  # вложенный модуль для работы с путями
 # os.listdir(path=".") # возвращает содержимое директории
-s = "123sss"
-bs = b"123sss"
-print(bs[1])
+# s = "123sss"
+# bs = b"123sss"
+# print(bs[1])
+
+import random
+
+print([random.randint(1, 101) for i in range(10)])
+print([i ** 2 for i in list(map(int, input().split()))])
