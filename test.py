@@ -125,8 +125,29 @@ def delete_dir(num):
 # s = "123sss"
 # bs = b"123sss"
 # print(bs[1])
+#
+# import random
+#
+# print([random.randint(1, 101) for i in range(10)])
+# print([i ** 2 for i in list(map(int, input().split()))])
 
-import random
-
-print([random.randint(1, 101) for i in range(10)])
-print([i ** 2 for i in list(map(int, input().split()))])
+# basket = ['apple', 'orange', 'salt', 'salat']
+# chest = ['orange', 'juice', 'butter', 'apple', 'suggar']
+# a = [i for i in basket if i in chest]
+# print(a)
+# rand = [1, 7, 55, 4, 99, 3, 11, 6, 7, 99, 1, 65, 4, 6, 7, 5, 69, 19, 79, -1, 4, -12, -48, -24, -5]
+# b = [i for i in rand if i % 3 == 0 and i % 4 != 0 and i > 0]
+# print(b)
+# import  math
+# def sqrt(listed):
+# 	new_list = [math.sqrt(num) if num > 0 else num for num in listed]
+#
+#
+# print(sqrt(a))
+# print(a)
+#
+# def er(a):
+# 	if a == 13:
+# 		raise ValueError("число 13 плохое")
+# 	return a**2
+# print(er(13))
