@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	//массив чисел
+	function getNumbers(n) {
+		var res = [];
+		for (var i = 1; i <= n; i++) {
+			res.push(i);
+		}
+		return res;
+	}
+
+	//сумма чисел
+	function sumNumbers(numbers) {
+		var res = 0;
+		for (var i = 0; i < numbers.length; i++) {
+			res = res +numbers[i];
+		}
+		return res;
+	}
+
+	//получение самого большого числа
+	function getMax(numbers) {
+		var res = 0;
+		for (var i = 0; i < numbers.length; i++) {
+			if (numbers[i] > res) {
+				res = numbers[i];
+			}
+		}
+		return res;
+	}
+
+	//получение четных чисел
+	function getEven(numbers) {
+		var res = [];
+		for (var i = 0; i < numbers.length; i++) {
+			if (numbers[i] % 2 == 0) {
+				res.push(numbers[i]);
+			}
+		}
+		return res;
+	}
+
+</script>

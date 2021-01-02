@@ -1,0 +1,270 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+/*
+	document.write("text<br>")  // пишет в документ, <br> - перенос строки
+
+// ===================================
+	var rd = parseInt(Math.random());  // возвращает рандом от 0 до 1, парс инт отбрасывает дробную часть
+	var mass = [1,2,3]; // объявление массива
+
+	mass.push(4);       // добавляем в массив значение 4
+	mass.pop();         // убирает последний элемент из массива и возвращает его
+	mass.splice(i, x);  // удаляем элементы из массива начиная c i, в кол-ве x
+// ====================================
+	var numbers = [];
+
+	var len = +prompt("Введите размер массива")
+	for (var i = 0; i < len; i++)
+	{
+		var randomNumber = parseInt(Math.random() * 100);
+		numbers.push(randomNumber);
+	}
+// =======================================
+// Объявление фунекции
+	function sayHello(name, surname)
+	{
+		document.write("Hello" + name + "<br>")
+		document.write("How are you" + sunmane + "<br>")
+		return (0);
+	}
+
+	function factorail(n)  // факториал
+	{
+		var result = 1;
+		for (var i = 1; i<= n; i++)
+			result = result * i;
+		return result;
+	}
+
+	function factorail(n)
+	{
+		if (n > 0)
+			return factorail(n-1) * n;
+		else
+			return 1
+	}
+
+	function getRandomNumber(max) // возвращает рандомное значение
+	{
+		return Math.round(Math.random() * max);
+	}
+
+	function getRandomNumberArray(len)
+	{
+		var arr = [];
+
+		for (var i = 0; i < len; i++)
+		{
+			var randomNumber = getRandomNumber(100);
+			arr.push(randomNumber);
+		}
+		retunr arr;
+	}
+
+	function generateText(letters, lenght)
+	{
+	var text = "",
+	for (var i = 0; <len; i++)
+	{
+		var n = getRandomNumber(letters.lenght - 1);
+		text = text + letters[]
+		return "fafaffffaaaffafafaf"
+	}
+
+	var mass = generateText(["a", "f"], 10); // генерирует последовательность из 10 бук
+
+
+	function askForWords(words)
+	{
+		while (words.length != 0)
+		{
+		var i = parseInt(Math.random() * words.length);
+		var userTranslate = (prompt("Как переводится слово " + words[i][0])).toLowerCase();
+		if (userTranslate == words[i][1])
+		{
+			alert("Правильно!");
+			words.splice(i, 1);
+		}
+		else
+			alert("Неверно, правильный ответ: " + words[i][1]);
+		}
+	}
+
+	var easyWords = [
+		["food", "еда"],
+		["bike", "велосипед"],
+		["do", "делать"],
+	];
+	askForWords(words)
+
+	var hardWords = [
+		["new", "новый"],
+		["bike", "велосипед"],
+		["do", "делать"],
+	];
+*/
+
+alert("Вас приветствует программа по обучению слепой печати");
+
+while(true)
+alert("Положите 4 пальца левой руки - мезинец, безымянный, средний и указательный - на клавиши ф, ы, в, а. Запомните, что буква А находится под вашим указательным пальцем, а Ф - по мизинцем. \nТеперь неспеша наберите текст. Постарайесь не смотреть на клавиатуру.");
+
+
+
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function ItIsNoMass(string) // проверка правильности введенных данных
+	{
+		if (!(string))
+			return (1);
+		for (var i = 0; i < string.length;)
+		{
+			if ((string[i] >= '0' && string[i] <= '9') || string[i] == ' ' || string[i] == '-')
+				i++;
+			else
+				return (1);
+		}
+		return (0);
+	}
+
+	function createIntMass(string) // создание массива
+	{
+		var mass = string.split(" ");
+		len = mass.length;
+		for (var i = 0; i < len; i++)
+			mass[i] = parseInt(mass[i]);
+		return mass;
+	}
+
+//==============
+
+	function a(n)
+	{
+		var mass = [];
+		for (var i = 1; i <= n; i++)
+			mass.push(i);
+		return (mass);
+	}
+
+	alert("Добро пожаловать на проверку функций 1 задания, начнём с 1 функции(a)");
+	while(isNaN(n))
+	{
+		var n = +prompt("Введите положительное число n, Результатом работы функции будет массив со значениями 1, 2, 3… n.");
+		if (isNaN(n))
+			alert("Кажется Вы ввели некорректное значение, давайте попробуем еще раз")
+	}
+	alert("Получившийся массив [" + a(n) + "]");
+
+//==============
+
+	function b(mass)
+	{
+		var sum = 0;
+		while (mass.length)
+			sum += mass.pop();
+		return sum;
+	}
+
+	alert("Переходим к проверке 2 функции(b)");
+
+	while(ItIsNoMass(str_1))
+	{
+		var str_1 = prompt("Введите через пробел значения массива, мы посчитаем сумму все значений");
+
+		if (ItIsNoMass(str_1))
+			alert("Кажется Вы ввели некорректное значение, давайте попробуем еще раз")
+	}
+
+	new_mass_1 = createIntMass(str_1); // преобразуем строку в интовый массив
+	alert("Получившаяся сумма всех значений = " + b(new_mass_1));
+
+//==============
+
+	function c(mass)
+	{
+		if (mass)
+			var max = mass.pop();
+		while (mass.length)
+		{
+			var number = mass.pop();
+			if (max < number)
+				max = number;
+		}
+		return max;
+	}
+
+	alert("Переходим к проверке 3 функции(c)");
+
+	while(ItIsNoMass(str_2))
+	{
+		var str_2 = prompt("Введите через пробел значения массива, мы выберем самое большое");
+
+		if (ItIsNoMass(str_2))
+			alert("Кажется Вы ввели некорректное значение, давайте попробуем еще раз")
+	}
+	new_mass_2 = createIntMass(str_2); // преобразуем строку в интовый массив
+	alert("Масимальное значение в массиве = " + c(new_mass_2));
+
+//==============
+
+	function d(mass)
+	{
+		if (mass)
+			var min = mass.pop();
+		while (mass.length)
+		{
+			var number = mass.pop();
+			if (min > number)
+				min = number;
+		}
+		return min;
+	}
+
+	alert("Переходим к проверке 4 функции(d)");
+
+	while(ItIsNoMass(str_3))
+	{
+		var str_3 = prompt("Введите через пробел значения массива, мы выберем самое маленькое");
+
+		if (ItIsNoMass(str_3))
+			alert("Кажется Вы ввели некорректное значение, давайте попробуем еще раз")
+	}
+	new_mass_3 = createIntMass(str_3); // преобразуем строку в интовый 
+	alert("Минимальноае значение в массиве = " + d(new_mass_3));
+
+//==============
+
+	function f(mass)
+	{
+		var newMass = [];
+		while (mass.length)
+		{
+			var number = mass.pop();
+			if (number % 2 == 0)
+				newMass.push(number);
+		}
+		return newMass;
+	}
+
+	alert("Переходим к проверке 5 функции(f)");
+
+
+	while(ItIsNoMass(str_4))
+	{
+		var str_4 = prompt("Введите через пробел значения массива, мы выберем только четные числа");
+
+		if (ItIsNoMass(str_4))
+			alert("Кажется Вы ввели некорректное значение, давайте попробуем еще раз")
+	}
+	new_mass_4 = createIntMass(str_4); // преобразуем строку в интовый 
+	alert("Четные числа в массиве: " + f(new_mass_4));
+
+	function inputMass(massage)
+	
+</script>
+
+
+
+
+</script>

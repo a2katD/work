@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	var desposit = +prompt('Введите сумму вклада: ')
+	var rate = +prompt('Введите годовой процент: ')
+
+	var percent = 0
+
+	for (var i = 1; i <= 5; i++) {
+		percent = desposit * (rate / 100)
+		desposit += percent
+		alert('Ваш вклад в ' + i + 'год равен ' + desposit)
+	}
+</script>

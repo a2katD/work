@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	var answer = +prompt("Сколько будет 2+2?");
+	var trueAnswer = 0
+
+	if (answer != 4)
+		alert("Ответ не верный");
+	else
+	{
+		trueAnswer++;
+		alert("Поздравляем, ответ верный!");
+	}
+	answer = prompt("Кто ходит утром на 4 ногах, днём на 2 ногах, а вечером на 3 ногах?");
+	if (answer == "Человек" || answer == "человек" || answer == "Люди" || answer == "люди")
+	{
+		trueAnswer++;
+		alert("Поздравляем, ответ верный!");
+	}
+	else
+		alert("Ответ не верный");
+	answer = +prompt("Сколько всего будет закадок?")
+	if (answer != 4)
+		alert("Ответ не верный");
+	else
+	{
+		trueAnswer++;
+		alert("Поздравляем, ответ верный!");
+	}
+	answer = prompt("Это последняя загадка?")
+	if (answer == "Да" || answer == "да")
+	{
+		trueAnswer++;
+		alert("Поздравляем, ответ верный!");
+	}
+	else
+		alert("Ответ не верный");
+	if (trueAnswer == 1)
+		alert("У вас " + trueAnswer + " правильный ответ");
+	else
+		alert("У вас " + trueAnswer + " правильных ответа");
+	alert("Игра окончена, спасибо за проверку =)");
+</script>

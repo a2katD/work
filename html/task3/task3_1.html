@@ -1,0 +1,126 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function ItIsNoMass(string) // проверка правильности введенных данных
+	{
+		if (!(string))
+			return (1);
+		for (var i = 0; i < string.length;)
+		{
+			if ((string[i] >= '0' && string[i] <= '9') || string[i] == ' ' || string[i] == '-')
+				i++;
+			else
+				return (1);
+		}
+		return (0);
+	}
+
+	function inputMass(massage) // создание массива целых чисел
+	{
+		while(ItIsNoMass(string))
+		{
+			var string = prompt("Введите через пробел значения массива, " + massage);
+
+			if (ItIsNoMass(string))
+				alert("Кажется Вы ввели некорректное значение, давайте попробуем еще раз")
+		}
+		var mass = string.split(" ");
+		len = mass.length;
+		for (var i = 0; i < len; i++)
+			mass[i] = parseInt(mass[i]);
+		return mass;
+	}
+
+
+//==============
+
+	function a(n)
+	{
+		var mass = [];
+		for (var i = 1; i <= n; i++)
+			mass.push(i);
+		return (mass);
+	}
+
+	alert("Добро пожаловать на проверку функций 1 задания, начнём с 1 функции(a)");
+	while(isNaN(n))
+	{
+		var n = +prompt("Введите положительное число n, Результатом работы функции будет массив со значениями 1, 2, 3… n.");
+		if (isNaN(n))
+			alert("Кажется Вы ввели некорректное значение, давайте попробуем еще раз")
+	}
+	alert("Получившийся массив [" + a(n) + "]");
+
+//==============
+
+	function b(mass)
+	{
+		var sum = 0;
+		while (mass.length)
+			sum += mass.pop();
+		return sum;
+	}
+
+	alert("Переходим к проверке 2 функции(b)");
+	mass_1 = inputMass("мы посчитаем сумму все значений");
+	alert("Получившаяся сумма всех значений = " + b(mass_1));
+
+//==============
+
+	function c(mass)
+	{
+		if (mass)
+			var max = mass.pop();
+		while (mass.length)
+		{
+			var number = mass.pop();
+			if (max < number)
+				max = number;
+		}
+		return max;
+	}
+
+	alert("Переходим к проверке 3 функции(c)");
+	mass_2 = inputMass("мы выберем самое большое");
+	alert("Масимальное значение в массиве = " + c(mass_2));
+
+//==============
+
+	function d(mass)
+	{
+		if (mass)
+			var min = mass.pop();
+		while (mass.length)
+		{
+			var number = mass.pop();
+			if (min > number)
+				min = number;
+		}
+		return min;
+	}
+
+	alert("Переходим к проверке 4 функции(d)");
+	mass_3 = inputMass("мы выберем самое маленькое");
+	alert("Минимальноае значение в массиве = " + d(mass_3));
+
+//==============
+
+	function f(mass)
+	{
+		var newMass = [];
+		while (mass.length)
+		{
+			var number = mass.pop();
+			if (number % 2 == 0)
+				newMass.push(number);
+		}
+		return newMass;
+	}
+
+	alert("Переходим к проверке 5 функции(f)");
+	mass_4 = inputMass("мы выберем только четные числа");
+	alert("Четные числа в массиве: " + f(mass_4));
+	alert("Это была последняя функция в 1 задании, спасибо за проверку, жду любых комментариев по улучшению работы");
+
+</script>
+

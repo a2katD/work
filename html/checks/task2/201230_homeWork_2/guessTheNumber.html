@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>guessTheNumber</title>
+	<body>
+<script>
+
+	var answer = parseInt(Math.random() * 100);
+
+
+	alert("Я хочу съиграть с вами в одну игру. Угадайте число от 0 до 100. Не хочешь играть пиши: NO");
+
+		while (true) {
+
+		var userAnswer1 = prompt("Игрок №1, введите свой ответ: ");
+		if (userAnswer1 == "NO" || userAnswer1 == "no"){
+		break;
+		}
+		if(userAnswer1 > answer) {
+			alert("Ваш ответ слишком большой.");
+		} else if(userAnswer1 < answer) {
+			alert("Ваш ответ слишком маленький.");
+		} else if(userAnswer1 == answer) {
+			alert("Игорк №1 выйграл");
+			break;}
+		
+		var userAnswer2	= prompt("Игрок №2, введите свой ответ: ");
+		if (userAnswer2 == "NO" || userAnswer2 == "no"){
+			break;
+		}
+		if(userAnswer2 > answer) {
+			alert("Ваш ответ слишком большой.");
+		} else if(userAnswer2 < answer) {
+			alert("Ваш ответ слишком маленький.");
+		} else if(userAnswer2 == answer) {
+			alert("Игорк №2 выйграл");
+			break;}
+
+	}
+
+
+</script>
+</body>
+</html>

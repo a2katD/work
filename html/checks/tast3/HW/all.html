@@ -1,0 +1,89 @@
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        let array = range(5);
+        sum(array);
+        max(array);
+        min(array);
+        alert(evenElements(array));
+        // console.log(array);
+        // console.log(sum(array));
+        // console.log(max(array));
+        // console.log(min(array));
+        // console.log(evenElements(array));
+ 
+        /**
+         * a. Написать функцию, которая принимает в качестве параметра число n. Результатом работы функции является массив из N элементов со значениями 1, 2, 3… n.
+         * @param {Number} n Количество элементов.
+         */
+        function range(n) {
+            for (var i, a = [i = 0]; i < n; a[i++] = i);
+            return a;
+        }
+ 
+        /**
+         * b. Сумма всех элементов массива.
+         * @param {Array} array Входящий массив.
+         */
+        function sum(array) {
+            let count = array.length;
+            let result = 0;
+ 
+            let buf;
+            for (let i = 0; i < count; ++i) {
+                buf = array[i];
+                if (buf != null)
+                    result += buf;
+            }
+            return result;
+        }
+ 
+        /**
+         * c. Максимальный элемент массива.
+         * @param {Array} array Входящий массив.
+         */
+        function max(array) {
+            let count = array.length;
+            let nocount = true;
+            let result = Number.NEGATIVE_INFINITY;
+            let buf;
+            for (let i = 0; i < count; ++i) {
+                buf = array[i];
+                if (buf != null && buf > result) {
+                    result = buf;
+                    if (nocount)
+                        nocount = false;
+                }
+            }
+            if (nocount) throw new Error("count == 0");
+            return result;
+        }
+ 
+        /**
+         * d. Минимальный элемент массива.
+         * @param {Array} array Входящий массив.
+         */
+        function min(array) {
+            let count = array.length;
+            let nocount = true;
+            let result = Number.POSITIVE_INFINITY;
+            let buf;
+            for (let i = 0; i < count; ++i) {
+                buf = array[i];
+                if (buf != null && buf < result) {
+                    result = buf;
+                    if (nocount)
+                        nocount = false;
+                }
+            }
+            if (nocount) throw new Error("count == 0");
+            return result;
+        }
+ 
+        /**
+         * f. Чётные числа массива.
+         * @param {Array} array Входящий массив.
+         */
+        function evenElements(array) {
+            return array.filter(x => x % 2 === 0)
+        }        
+    </script>

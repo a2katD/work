@@ -115,7 +115,6 @@ def delete_dir(num):
 		new_dir = os.path.join(os.getcwd(), ("dir_" + str(i)))
 		os.rmdir(new_dir)
 
-
 # os.name  # имя операционной системы
 # os.chdir  # смена текущей директории
 # os.getcwd()  # возвращает текущую директорию
@@ -151,3 +150,8 @@ def delete_dir(num):
 # 		raise ValueError("число 13 плохое")
 # 	return a**2
 # print(er(13))
+listed = [1,2,3,4,5,7,11,15,19]
+d = iter(listed) # создает итерируемы объект, который можно проитерировать 1 раз
+# for i in d:
+	# print(i)
+print("123\r456")

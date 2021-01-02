@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Riddle</title>
+	<body>
+<script>
+
+	var rightAnswer = 0;
+	var falseAnswer = 0;
+	
+	alert("Отгадайте три загадки");
+	
+	var riddle1 = prompt("Кто на своей голове лес носит?");
+	if (riddle1 == "Олень" || riddle1 == "олень") {
+			alert("Вы угадали!");
+			rightAnswer++;
+		} else {
+			alert("Ответ не верный. Это олень");
+			falseAnswer++;
+		}	
+
+	var riddle2 = prompt("Почти как барашек но без кудряшек.?");
+	if (riddle2 == "Коза" || riddle2 == "коза") {
+			alert("Вы угадали!");
+			rightAnswer++;
+		} else {
+			alert("Ответ не верный. Это коза");
+			falseAnswer++;
+		}	
+
+	var riddle3 = prompt("Не боюсь я слова брысь, - я лесная кошка...?");
+	if (riddle3 == "Рысь" || riddle3 == "рысь") {
+			alert("Вы угадали!");
+			rightAnswer++;
+		} else {
+			alert("Ответ не верный. Это олень");
+			falseAnswer++;
+		}		
+
+		alert("Правильных ответов: " + rightAnswer + "\n" + "Неправильных ответов: " + falseAnswer);	
+
+
+
+
+</script>
+</body>
+</html>

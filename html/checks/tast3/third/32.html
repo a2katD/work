@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	alert("Обучение слепой печати");
+	//вызов уровней
+	game("а","ф",10);
+	game("ы","в", 10);
+	game("о","ж", 10);
+	alert("Все уровни пройдены, Вы молодец!");
+
+	function game(a,b,len) { //функция принимает символы и длинну строки
+		var x =true; //переменная для выхода из цикла
+		while(x == true) {
+			alert("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев. Повторяйте за мной");
+			var text = generateText([a,b], len);
+			var userText = prompt("Введите текст "+"\n"+text);
+			if (text == userText) {
+				alert("Все правильно!");
+				x = false;
+			} else {
+				alert("Неверно! \nПопробуйте еще раз");
+			}
+		}
+	}
+
+
+	function generateText(letters,length) {
+		var res = "";
+		for (var i = 0; i < length; i++) {
+			var n = getRandomNumber(letters.length -1);
+			res = res+letters[n];	
+		}
+		return res;
+	}
+
+	function getRandomNumber(max) {
+		return Math.round(Math.random() * max);
+	}
+</script>

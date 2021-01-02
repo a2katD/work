@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+// Массив с загадками
+var riddles = [
+  [
+    "Висит груша, нельзя скушать", // Загадка
+    ["Лампочка", "Лампа", "лампа", "лампочка"] // Правильные ответы
+  ],
+  [
+    "Не огонь, а жжется",
+    ["крапива", "Крапива"]
+  ],
+  [
+    "Течет-течет -не вытечет, бежит-бежит —не выбежит",
+    ["Река", "река"]
+  ]
+]
+ 
+function getAnswer(riddle) {
+  return prompt(riddle[0]);
+}
+ 
+function isValidAnswer(riddle, answer) {
+  for (var i = 0; i < riddle[1].length; i++) {
+    if (riddle[1][i] == answer) return true;
+  }
+ 
+  return false;
+}
+ 
+alert("Отгадай загадки.");
+ 
+// Количество правильных ответов
+var validAnswers = 0;
+ 
+for (var i = 0; i < riddles.length; i++) {
+  var answer = getAnswer(riddles[i]);
+ 
+  if (isValidAnswer(riddles[i], answer)) {
+    validAnswers++;
+    alert("Поздравляем, вы угадали!");
+  } else {
+    alert("Вы не угадали!");
+  }
+}
+ 
+alert("Правильных ответов: " + validAnswers);
+</script>

@@ -1,0 +1,75 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function getRandomNumber(max)
+	{
+		return Math.round(Math.random() * max);
+	}
+
+	function generateText(letters, length)
+	{
+		var text = "";
+		for (var i = 0; i < length; i++)
+		{
+			var n = getRandomNumber(letters.length - 1);
+			text = text + letters[n];
+		}
+	return (text);
+	}
+
+	function writeTrainer(letters, length)
+	{
+		while(true)
+		{
+			alert("Положите 4 пальца левой руки - мезинец, безымянный, средний и указательный - на клавиши ф, ы, в, а. Запомните, что буква А находится под вашим указательным пальцем, а Ф - по мизинцем. \nТеперь неспеша наберите текст. Постарайесь не смотреть на клавиатуру.");
+			var text = generateText(letters, length);
+			var userText = prompt(text)
+			if (userText == text)
+			{
+				alert("Отлично, Вы справились, переходим к следующему уровню");
+				break;
+			}
+			else
+				alert("Вы ошиблись. Попробуйте еще раз")
+		}
+	}
+
+//=======================
+
+	alert("Вас приветсвует программа по обучению слепой печати");
+	var level = 1;
+	while (level != 0)
+	{
+		level = +prompt("Выберите уровень сложности от 1 до 5\n1 уровень 'ф' 'а'\n2 уровень 'ы' 'в'\n3 уровень 'о' 'ж'\n4 уровень 'л' 'д'\n5 уровень интерактивный, введите символы и количество повторений\nДля выхода из игры наберите 0");
+		if (isNaN(level))
+		{
+			alert("Вы ввели некорректное значение, попробуйте снова")
+			continue;
+		}
+		if (level == 1)
+			writeTrainer(['ф','а'], 10);
+		if (level == 2)
+			writeTrainer(['ы','в'], 10);
+		if (level == 3)
+			writeTrainer(['о','ж'], 10);
+		if (level == 4)
+			writeTrainer(['л','д'], 10);
+		if (level == 5)
+		{
+			symbol = prompt("Введите символы без пробелов и знаков препинания");
+			mass = symbol.split("");
+			num = +prompt("Введите число вовторений")
+			if (isNaN(num))
+			{
+				alert("Вы ввели некорректное значение, начнём игру заново")
+				continue;
+			}
+			writeTrainer(mass, num);
+		}
+		if (level == 0)
+			break;
+	}
+	alert("Спасибо за проверку, с празниками =)")
+
+</script>
+

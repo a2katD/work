@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	do {
+	var sum = +prompt("Введите сумму вклада");
+	var percent = +prompt("Введите процентную ставку");
+	if (isNaN(sum) || isNaN(percent) || sum <= 0 || percent <= 0)
+		alert("Введенные данные некоректны, пожалуйста, введите числовое значение больше нуля");
+	} while (isNaN(sum) || isNaN(percent) || sum <= 0 || percent <= 0)
+	for (var i = 1; i <= 5; i++)
+	{
+		sum = sum + sum / 100 * percent;
+		document.write("Размер вклада после " + i + " года равен " + sum.toFixed(2) + "<br>");
+	}
+</script>

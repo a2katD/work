@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	alert('Игра угадай число. Если вы захотите выйти, напишите: 101')
+	var answer = parseInt(Math.random() * 100)
+	var userAnswer1 = +prompt('1 игрок: Угадайте число от 0 до 100')
+	var userAnswer2 = +prompt('2 игрок: Угадайте число от 0 до 100')
+	var maxTryCount = 10
+	var exit = 101
+
+
+		while (userAnswer1 != answer || userAnswer2 != answer ) {
+			// statement
+			if(userAnswer1 == exit || userAnswer2 == exit){
+				break
+			}
+			if(userAnswer1 == answer ){
+			alert('1 игрок: Поздравляю, вы угадали')
+			break
+		} else if (userAnswer1 > answer){
+			alert('1 игрок: Вы ввели слишком большое число')
+		}else if(userAnswer1 < answer){
+			alert('1 игрок: Вы ввели слишком маленькое число')
+		}
+
+		
+
+		if(userAnswer2 == answer ){
+			alert('2 игрок: Поздравляю, вы угадали')
+			break
+		} else if (userAnswer2 > answer){
+			alert('2 игрок: Вы ввели слишком большое число')
+		}else if(userAnswer2 < answer){
+			alert('2 игрок: Вы ввели слишком маленькое число')
+		}
+
+
+		userAnswer1 = +prompt('1 игрок: Попробуйте еще раз.Введите число от 1 до 100 ')
+
+		userAnswer2 = +prompt('2 игрок: Попробуйте еще раз.Введите число от 1 до 100 ')
+
+		}
+
+</script>
