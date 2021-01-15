@@ -150,8 +150,12 @@ def delete_dir(num):
 # 		raise ValueError("число 13 плохое")
 # 	return a**2
 # print(er(13))
-listed = [1,2,3,4,5,7,11,15,19]
-d = iter(listed) # создает итерируемы объект, который можно проитерировать 1 раз
-# for i in d:
-	# print(i)
-print("123\r456")
+# listed = [1,2,3,4,5,7,11,15,19]
+# d = iter(listed) # создает итерируемы объект, который можно проитерировать 1 раз
+# # for i in d:
+# 	# print(i)
+# print("123\r456")
+
+a = ['', '', '2']
+print(all(a))
+print(any(a))
