@@ -105,15 +105,16 @@ import os
 
 
 def create_dir(num):
-	for i in range(1, num + 1):
-		new_dir = os.path.join(os.getcwd(), ("dir_" + str(i)))
-		os.mkdir(new_dir)
+    for i in range(1, num + 1):
+        new_dir = os.path.join(os.getcwd(), ("dir_" + str(i)))
+        os.mkdir(new_dir)
 
 
 def delete_dir(num):
-	for i in range(1, num + 1):
-		new_dir = os.path.join(os.getcwd(), ("dir_" + str(i)))
-		os.rmdir(new_dir)
+    for i in range(1, num + 1):
+        new_dir = os.path.join(os.getcwd(), ("dir_" + str(i)))
+        os.rmdir(new_dir)
+
 
 # os.name  # имя операционной системы
 # os.chdir  # смена текущей директории
@@ -156,6 +157,22 @@ def delete_dir(num):
 # 	# print(i)
 # print("123\r456")
 
-a = ['', '', '2']
-print(all(a))
-print(any(a))
+# f = open("numbers.txt.")
+# num = f.readlines()
+# print(num)
+# for i in range(len(num)):
+#     num[i] = int(num[i].replace("\n", ""))
+# print(num)
+# c = 0
+# s = 0
+# for i in num:
+#     if i > 99 and i < 1000:
+#         c += 1
+#     if i > 9 and i < 100:
+#         s += i
+# print(c)
+# print(s)
+
+
+
+print(-5//2)
