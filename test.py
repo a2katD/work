@@ -173,6 +173,6 @@ def delete_dir(num):
 # print(c)
 # print(s)
 
-
-
-print(-5//2)
+a = [1,12,2,1,1,1,1,1,1,31,321,3,13,132,1,321]
+a = sorted(list(set(a)))
+print(a)
