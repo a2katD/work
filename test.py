@@ -173,6 +173,7 @@ def delete_dir(num):
 # print(c)
 # print(s)
 
+<<<<<<< HEAD
 class Error:
     def __init__(self, *args):
         self.my_list = []
@@ -196,3 +197,10 @@ class Error:
 
 try_except = Error(1)
 print(try_except.my_input())
+=======
+a = [1,12,2,1,1,1,1,1,1,31,321,3,13,132,1,321]
+a = sorted(list(set(a)))
+print(a)
+
+
+>>>>>>> ef7bbbf100c4d15e637efa0c1e6049eebd8a6457
