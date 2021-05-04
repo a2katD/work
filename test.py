@@ -206,18 +206,29 @@ def delete_dir(num):
 # >>>>>>> ef7bbbf100c4d15e637efa0c1e6049eebd8a6457
 
 # n, m = map(int, input().split())
-n = int(input())
-string = input()
-i = k = 0
-while k != -1 and i != -1:
-    while i != -1:
-        i = string.find('01')
-        if i != -1:
-            string = string[:i] + string[i+2:]
-            k = 0
-    while k != -1:
-        k = string.find('10')
-        if k != -1:
-            string = string[:k] + string[k+2:]
-            i = 0
-print(len(string))
+# n = int(input())
+# string = input()
+# i = k = 0
+# while k != -1 and i != -1:
+#     while i != -1:
+#         i = string.find('01')
+#         if i != -1:
+#             string = string[:i] + string[i+2:]
+#             k = 0
+#     while k != -1:
+#         k = string.find('10')
+#         if k != -1:
+#             string = string[:k] + string[k+2:]
+#             i = 0
+# print(len(string))
+import zipfile, re
+f = zipfile.ZipFile(r"C:\Users\Jura-PK\Desktop\channel.zip")
+path = r'C:\Users\Jura-PK\Desktop\channel\94191.txt'
+rez = []
+while True:
+    with open(path, "r", encoding='utf-8') as f:
+        data = f.read()
+        print(data)
+        link = data[data.rfind("is ")+3:]
+        path = r'C:\Users\Jura-PK\Desktop\channel' + '\\' + link + '.txt'
+        comments.append(f.getinfo(num + ".txt").comment.decode("utf-8"))
