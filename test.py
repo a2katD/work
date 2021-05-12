@@ -221,14 +221,20 @@ def delete_dir(num):
 #             string = string[:k] + string[k+2:]
 #             i = 0
 # print(len(string))
-import zipfile, re
-f = zipfile.ZipFile(r"C:\Users\Jura-PK\Desktop\channel.zip")
-path = r'C:\Users\Jura-PK\Desktop\channel\94191.txt'
-rez = []
-while True:
-    with open(path, "r", encoding='utf-8') as f:
-        data = f.read()
-        print(data)
-        link = data[data.rfind("is ")+3:]
-        path = r'C:\Users\Jura-PK\Desktop\channel' + '\\' + link + '.txt'
-        comments.append(f.getinfo(num + ".txt").comment.decode("utf-8"))
+# import zipfile, re
+# f = zipfile.ZipFile(r"C:\Users\Jura-PK\Desktop\channel.zip")
+# path = r'C:\Users\Jura-PK\Desktop\channel\94191.txt'
+# rez = []
+# while True:
+#     with open(path, "r", encoding='utf-8') as f:
+#         data = f.read()
+#         print(data)
+#         link = data[data.rfind("is ")+3:]
+#         path = r'C:\Users\Jura-PK\Desktop\channel' + '\\' + link + '.txt'
+#         comments.append(f.getinfo(num + ".txt").comment.decode("utf-8"))
+
+string = ""
+
+for i in range(100):
+    string = string + "'" + str(i+1) + "',"
+print(string)
