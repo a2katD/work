@@ -233,8 +233,3 @@ def delete_dir(num):
 #         path = r'C:\Users\Jura-PK\Desktop\channel' + '\\' + link + '.txt'
 #         comments.append(f.getinfo(num + ".txt").comment.decode("utf-8"))
 
-string = ""
-
-for i in range(100):
-    string = string + "'" + str(i+1) + "',"
-print(string)
