@@ -10,7 +10,26 @@
 
 <body>
     <script>
-
+        first = Number(prompt("Введите 1 число"));
+        second = Number(prompt("Введите 2 число"));
+        const addition2 = (a, b) => a + b;
+        function addition(a, b) {
+            return a + b;
+        }
+        function subtraction(a, b) {
+            return a - b;
+        }
+        function multiplication(a, b) {
+            return a * b;
+        }
+        function division(a, b) {
+            return a / b;
+        }
+        alert(addition2(first, second));
+        alert("Результат сложения равен: " + addition(first, second));
+        alert("Результат вычитания равен: " + subtraction(first, second));
+        alert("Результат умножения равен: " + multiplication(first, second));
+        alert("Результат деления равен: " + division(first, second));
     </script>
 </body>
 
