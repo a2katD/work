@@ -10,6 +10,34 @@
 
 <body>
     <script>
+        const addition = (a, b) => a + b;
+        const subtraction = (a, b) => a - b;
+        const multiplication = (a, b) => a * b;
+        const division = (a, b) => a / b;
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "addition":
+                    console.log(addition(arg1, arg2));
+                    break;
+                case "subtraction":
+                    console.log(subtraction(arg1, arg2));
+                    break;
+                case "multiplication":
+                    console.log(multiplication(arg1, arg2));
+                    break;
+                case "division":
+                    console.log(division(arg1, arg2));
+                    break;
+                default:
+                    console.log("Упс, что-то пошло не так!");
+            }
+        }
+
+        arg1 = Number(prompt("Введите 1 число"));
+        arg2 = Number(prompt("Введите 2 число"));
+        operation = prompt("Назовите операцию на (английском языке)");
+        mathOperation(arg1, arg2, operation);
 
     </script>
 </body>

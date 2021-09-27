@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function main() {
+            deposit = prompt("Введите количество денег которые хотите положить на счёт в банке");
+            if (isNaN(deposit) || deposit <= 0) {
+                alert("Вы ввели некорректное значение, необходимо ввести положительное число");
+                return;
+            }
+            switch (deposit.slice(-1)) {
+                case "1":
+                    alert("Ваша сумма в " + deposit + " рубль успешно зачислена.");
+                    break;
+                case "2":
+                case "3":
+                case "4":
+                    alert("Ваша сумма в " + deposit + " рубля успешно зачислена.");
+                    break;
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                case "0":
+                    alert("Ваша сумма в " + deposit + " рублей успешно зачислена.");
+                    break;
+                default:
+                    alert("Вы ввели некорректное значение, возможно оно содержит лишние пробелы или символы");
+
+            }
+        }
+        main();
+    </script>
+</body>
+
+</html>
