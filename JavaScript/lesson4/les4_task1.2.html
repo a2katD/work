@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Post_es5(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        Post_es5.prototype.edit = function (new_text) {
+            this.text = new_text;
+        }
+
+        function Attachedost_es5(author, text, date, highlighted = false) {
+            this.highlighted = highlighted;
+            Post_es5.call(this, author, text, date);
+        }
+
+        Attachedost_es5.prototype = Object.create(Post_es5.prototype);
+        Attachedost_es5.prototype.constructor = Attachedost_es5;
+
+        Attachedost_es5.prototype.makeTextHighlighted = function () {
+            this.highlighted = true;
+        }
+
+        let test1 = new Attachedost_es5("author1", "text1", "29.09.2021");
+        test1.makeTextHighlighted();
+        test1.edit("edit_text1");
+        alert(`Автор: ${test1.author}, текст: ${test1.text}, дата: ${test1.date}, highlighted: ${test1.highlighted}`);
+
+        /* Вторая часть задания */
+
+        class Post_es6 {
+            constructor(author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            }
+
+            edit(new_text) {
+                this.text = new_text;
+            }
+        }
+
+        class Attachedost_es6 extends Post_es6 {
+            constructor(author, text, date, highlighted = false) {
+                super(author, text, date);
+                this.highlighted = highlighted;
+            }
+
+            makeTextHighlighted() {
+                this.highlighted = true;
+            }
+        }
+
+        let test2 = new Attachedost_es6("author2", "text2", "29.09.2021");
+        test2.makeTextHighlighted();
+        test2.edit("edit_text2");
+        alert(`Автор: ${test2.author}, текст: ${test2.text}, дата: ${test2.date}, highlighted: ${test2.highlighted}`);
+
+    </script>
+</body>
+
+</html>
